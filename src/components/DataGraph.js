@@ -72,7 +72,7 @@ const dataGraph = (props) => {
             legendSpacing={5}
             tooltip={true}
             tooltipProps={tooltipProps}
-            fontSizeFactor={0.5}
+            fontSizeFactor={0.3}
             onClick={handleClick}
 
     />
