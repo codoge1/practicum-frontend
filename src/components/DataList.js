@@ -29,7 +29,8 @@ const dataList = (props) => {
                           onClick={() => chooseDetail(classIndex, detailIndex)}
                           // className={classes.listItem}
                           >
-                          <ListItemText primary={patent.name}/>
+                          {/* <ListItemText primary={patent.name}/> */}
+                          <div style={{'textAlign':'left'}} dangerouslySetInnerHTML={{__html: patent.name}}></div>
                           </ListItem>
       })
         return (
