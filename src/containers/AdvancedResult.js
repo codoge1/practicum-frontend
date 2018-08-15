@@ -60,7 +60,7 @@ class AdvancedResult extends Component {
                     <Grid item xs={6}>
                    
                         <Paper className={classes.paper}>
-                        <Scrollbars style={{ width: '100%', height: 650, border:'1px gray',borderRadius:'15px' }}>
+                        <Scrollbars style={{ width: '100%', height: 652, border:'1px gray',borderRadius:'15px' }}>
                             <PatentList />
                         </Scrollbars>
                         </Paper>
