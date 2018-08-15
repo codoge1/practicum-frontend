@@ -30,7 +30,7 @@ const dataList = (props) => {
                           // className={classes.listItem}
                           >
                           {/* <ListItemText primary={patent.name}/> */}
-                          <div style={{'textAlign':'left'}} dangerouslySetInnerHTML={{__html: patent.name}}></div>
+                          <div style={{'textAlign':'left'}} dangerouslySetInnerHTML={{__html: detailIndex + 1 + ': ' + patent.name}}></div>
                           </ListItem>
       })
         return (
@@ -103,7 +103,7 @@ const styles = theme => ({
     },
     list: {
       width: '100%',
-      maxWidth: 360,
+      // maxWidth: 360,
       backgroundColor: theme.palette.background.paper,
     },
     heading: {

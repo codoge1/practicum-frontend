@@ -11,6 +11,7 @@ import Button from '@material-ui/core/Button';
 import boldClass from './DataDetail.css'
 import Grid from '@material-ui/core/Grid';
 import { Scrollbars } from 'react-custom-scrollbars';
+import ForceGraph from './ForceGraph'
 
 
 
@@ -138,6 +139,10 @@ const dataDetail = (props) => {
                 </Grid>
                 
                 <Grid item xs={4}>
+                    <Typography style={{textAlign:'left'}} variant="headline">
+                        File Info:
+                    </Typography>
+
                     <Paper className={classes.paper}>
                         <Typography variant="body2">
                             Family ID: {patent.familyId}
@@ -160,6 +165,14 @@ const dataDetail = (props) => {
                         {/* <Typography variant="body2">
                             Citations: {citations}
                         </Typography> */}
+                    </Paper>
+                    
+                    <Typography style={{marginTop:'10%', textAlign:'left'}} variant="headline">
+                        Citations:
+                    </Typography>
+
+                    <Paper style={{marginTop:'3%', height:'46%'}} className={classes.paper}>
+                        <ForceGraph />
                     </Paper>
                 </Grid>
             </Grid>
