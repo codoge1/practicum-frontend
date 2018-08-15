@@ -9,6 +9,7 @@ import PatentList from '../components/PatentList'
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 
 
@@ -57,9 +58,13 @@ class AdvancedResult extends Component {
                         </Paper>
                     </Grid>
                     <Grid item xs={6}>
+                   
                         <Paper className={classes.paper}>
+                        <Scrollbars style={{ width: '100%', height: 650, border:'1px gray',borderRadius:'15px' }}>
                             <PatentList />
+                        </Scrollbars>
                         </Paper>
+                        
                     </Grid>
                 </Grid>
             </div>
