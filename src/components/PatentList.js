@@ -75,7 +75,7 @@ const patentList = (props) => {
       props.history.push('/advanced')
     }
 
-    let classification = props.classData.label === undefined ? null : 'Classification: ' + props.classData.label
+    let classification = props.classData.label === undefined ? 'All Results' : 'Classification: ' + props.classData.label
 
     return (
       <Aux>
