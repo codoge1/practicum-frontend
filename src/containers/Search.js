@@ -32,7 +32,7 @@ class Search extends Component {
             <div>
                 <Aux>
                     <Route path='/' exact component={SimpleSearch} />
-                    <Route path='/simple/patentsGraph' exact component={AllPatentsGraph} />
+                    {/* <Route path='/simple/patentsGraph' exact component={AllPatentsGraph} /> */}
                     <Route path='/simple/patentsList' exact component={AllPatentsList} />
                     <Route path='/simple/detail' exact component={DataDetail} />
 

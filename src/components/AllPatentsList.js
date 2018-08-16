@@ -26,10 +26,10 @@ const AllPatents = (props) => {
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
                 <div>
-              <Typography>
+              {/* <Typography> */}
                 {/* Abstract: { el.patentAbstract } */}
                 <div style={{'textAlign':'left'}} dangerouslySetInnerHTML={{__html: 'Abstract:  ' + el.patentAbstract}}></div>
-                </Typography>
+                {/* </Typography> */}
                 <Avatar style={{cursor:'pointer'}} onClick={() => goToDetail(index)} className={classes.greenAvatar}>
                   <AssignmentIcon />
                 </Avatar>
@@ -63,7 +63,7 @@ const AllPatents = (props) => {
       <Aux>
         <div className={classes.root}>
         <Typography variant="headline" gutterBottom>
-            Search Content:{props.input}
+            Search Content: {props.input}
         </Typography>
         
         <br/>
@@ -75,9 +75,9 @@ const AllPatents = (props) => {
 
         </div>
         <div>
-        <Button className={classes.button} variant="contained" onClick={() => switchToGraph()} color="primary">
+        {/* <Button className={classes.button} variant="contained" onClick={() => switchToGraph()} color="primary">
                                                             Show All as Graph
-                                                         </Button>
+                                                         </Button> */}
         <Button className={classes.button} variant="contained" onClick={() => goBack()} color="primary">
                                                             Return
                                                             </Button>

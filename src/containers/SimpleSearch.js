@@ -187,7 +187,7 @@ class Search extends Component {
             // this.setState({data:patents})
             this.setState({showSpinner:false,
                             showResult:true})
-            this.props.history.push('/simple/patentsGraph')
+            this.props.history.push('/simple/patentsList')
         })
         .catch((e) => {
             console.log(e)

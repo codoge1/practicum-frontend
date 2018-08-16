@@ -16,6 +16,7 @@ import axios from 'axios'
 import {withRouter} from 'react-router'
 
 
+
 const patentList = (props) => {
     const { classes } = props;
     // const compare = (a, b) => {

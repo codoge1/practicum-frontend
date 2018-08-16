@@ -8,7 +8,7 @@ import Input from '@material-ui/core/Input';
 import { connect } from 'react-redux';
 import Aux from '../hoc/Aux'
 import Button from '@material-ui/core/Button';
-import boldClass from './DataDetail.css'
+// import boldClass from './DataDetail.css'
 import Grid from '@material-ui/core/Grid';
 import { Scrollbars } from 'react-custom-scrollbars';
 import ForceGraph from './ForceGraph'
@@ -92,12 +92,10 @@ const dataDetail = (props) => {
                 <div>
                 <Paper className={classes.paper} elevation={1}>
                     <Typography style={{textAlign: 'center'}} variant="display1" component="h1">
-                        Title: {patent.name}
+                        {patent.name}
                     </Typography>
                     <br/>
-                    <Typography style={{textAlign: 'center'}} variant='subheading' component="p">
-                        Application_ID:  {patent.id}
-                    </Typography>
+
                     <br/>
                     <Typography style={{textAlign: 'center'}} variant="title" component="h4">
                         Abstract
@@ -109,11 +107,11 @@ const dataDetail = (props) => {
                     </Typography>
                     <br/>
                     <Typography style={{textAlign: 'center'}} variant="title">
-                        Content
+                        Description
                     </Typography>
                     <br />
                     <br />
-                    <div className={boldClass}>
+                    <div>
                     {/* <Highlighter textToHighlight='asfasdas <b>gesadasd</b>'
                                 searchWords={[]}/> */}
                     <Scrollbars style={{ width: '100%', height: 330, border:'1px solid gray',borderRadius:'15px' }}>
@@ -123,6 +121,23 @@ const dataDetail = (props) => {
                         {/* {patent.description} */}
                     </Scrollbars>
                     </div>
+
+                    <Typography style={{textAlign: 'center', marginTop:'5%'}} variant="title">
+                        Claims
+                    </Typography>
+                    <br />
+                    <br />
+                    <div>
+                    {/* <Highlighter textToHighlight='asfasdas <b>gesadasd</b>'
+                                searchWords={[]}/> */}
+                    <Scrollbars style={{ width: '100%', height: 330, border:'1px solid gray',borderRadius:'15px' }}>
+                        <Typography style={{padding:10}} variant='body2'>
+                            {patent.claims}
+                        </Typography>
+                        {/* {patent.description} */}
+                    </Scrollbars>
+                    </div>
+
                 </Paper>
                 </div>
                 <div>
@@ -143,24 +158,27 @@ const dataDetail = (props) => {
                         File Info:
                     </Typography>
 
-                    <Paper className={classes.paper}>
+                    <Paper style={{marginTop:'3%'}} className={classes.paper}>
                         <Typography variant="body2">
-                            Family ID: {patent.familyId}
+                            <b>Application ID:</b> {patent.id}
                         </Typography>
                         <Typography variant="body2">
-                            Filing Date: {filingDate}
+                        <b>Family ID:</b> {patent.familyId}
                         </Typography>
                         <Typography variant="body2">
-                            Grant Date: {grantDate}
+                        <b>Filing Date:</b> {filingDate}
                         </Typography>
                         <Typography variant="body2">
-                            Publication Date: {publicationDate}
+                        <b>Grant Date:</b> {grantDate}
                         </Typography>
                         <Typography variant="body2">
-                            CPC: {cpc}
+                        <b>Publication Date:</b> {publicationDate}
                         </Typography>
                         <Typography variant="body2">
-                            Assignee: {patent.assignee}
+                        <b>CPC:</b> {cpc}
+                        </Typography>
+                        <Typography variant="body2">
+                        <b>Assignee:</b> {patent.assignee}
                         </Typography>
                         {/* <Typography variant="body2">
                             Citations: {citations}
@@ -171,7 +189,7 @@ const dataDetail = (props) => {
                         Citations:
                     </Typography>
 
-                    <Paper style={{marginTop:'3%', height:'46%'}} className={classes.paper}>
+                    <Paper style={{marginTop:'3%', height:'29%'}} className={classes.paper}>
                         <ForceGraph />
                     </Paper>
                 </Grid>

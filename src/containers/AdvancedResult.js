@@ -47,9 +47,8 @@ class AdvancedResult extends Component {
                                 }}
                             >
                                 <option value='Kmeans'>Kmeans</option>
-                                <option value='CPC'>CPC</option>
+                                <option value='Lingo'>Lingo</option>
                                 <option value='STC'>STC</option>
-                                <option value='Citations'>Citations</option>
                             </Select>
                         </FormControl>
                         </div>

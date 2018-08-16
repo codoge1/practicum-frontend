@@ -53,9 +53,9 @@ class SimpleTabs extends React.Component {
           <Tab
             disableRipple
             classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
-            label="Patentability"
+            label="Dorothy"
           />
-          <Tab
+          {/* <Tab
             disableRipple
             classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
             label="Freedom to Operate"
@@ -69,7 +69,7 @@ class SimpleTabs extends React.Component {
             disableRipple
             classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
             label="Invalidity"
-          />
+          /> */}
           <Tab
             disableRipple
             classes={{ root: classes.tabRight, selected: classes.tabSelected }}
@@ -80,10 +80,10 @@ class SimpleTabs extends React.Component {
           </AppBar>
         {value === 0 && <TabContainer><Search /></TabContainer>}
         {value === 1 && <TabContainer><Search /></TabContainer>}
-        {value === 2 && <TabContainer>Should be freedom to operate page</TabContainer>}
+        {/* {value === 2 && <TabContainer>Should be freedom to operate page</TabContainer>}
         {value === 3 && <TabContainer>Should be clearance page</TabContainer>}
-        {value === 4 && <TabContainer>Should be invalidity page</TabContainer>}
-        {value === 5 && <TabContainer><Auth /></TabContainer>}
+        {value === 4 && <TabContainer>Should be invalidity page</TabContainer>} */}
+        {value === 2 && <TabContainer><Auth /></TabContainer>}
       </div>
     );
   }
