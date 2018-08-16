@@ -8,7 +8,7 @@ import Input from '@material-ui/core/Input';
 import { connect } from 'react-redux';
 import Aux from '../hoc/Aux'
 import Button from '@material-ui/core/Button';
-// import boldClass from './DataDetail.css'
+import boldClass from './DataDetail.css'
 import Grid from '@material-ui/core/Grid';
 import { Scrollbars } from 'react-custom-scrollbars';
 import ForceGraph from './ForceGraph'

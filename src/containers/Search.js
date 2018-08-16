@@ -31,11 +31,12 @@ class Search extends Component {
         return (
             <div>
                 <Aux>
-                    <Route path='/' exact component={SimpleSearch} />
                     {/* <Route path='/simple/patentsGraph' exact component={AllPatentsGraph} /> */}
+                    <Route path='/simple' exact component={SimpleSearch} />
                     <Route path='/simple/patentsList' exact component={AllPatentsList} />
                     <Route path='/simple/detail' exact component={DataDetail} />
 
+                    <Route path='/' exact component={AdvanceSearch} />
                     <Route path='/advanced' exact component={AdvanceSearch} />
                     <Route path='/advanced/result' exact component={AdvancedResult} />
                     <Route path='/advanced/classificationGraph' exact component={DataGraph} />

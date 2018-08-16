@@ -200,7 +200,7 @@ class Search extends Component {
 
 
       handleSwitch = () => {
-        this.props.history.push('/')
+        this.props.history.push('/simple')
     }
 
     search = () => {
