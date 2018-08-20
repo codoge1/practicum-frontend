@@ -46,8 +46,8 @@ class AdvancedResult extends Component {
                                 id: 'age-native-simple',
                                 }}
                             >
-                                <option value='Kmeans'>Kmeans</option>
                                 <option value='Lingo'>Lingo</option>
+                                <option value='Kmeans'>Kmeans</option>
                                 <option value='STC'>STC</option>
                             </Select>
                         </FormControl>

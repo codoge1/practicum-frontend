@@ -220,7 +220,7 @@ class Search extends Component {
         if (this.state.select === '3') {
             searchBy += "&claim=true"
         }
-        const url = 'http://three10-1714580309.us-east-2.elb.amazonaws.com/api/search?method=kmeans&q='  + invention + searchBy + '&nf=' + noval + '&bst=' + weight
+        const url = 'http://three10-1714580309.us-east-2.elb.amazonaws.com/api/search?method=lingo&q='  + invention + searchBy + '&nf=' + noval + '&bst=' + weight
         // console.log(url)
         this.setState({showSpinner:true,
                         showResult:true,
