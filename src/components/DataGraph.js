@@ -24,7 +24,7 @@ const dataGraph = (props) => {
         })
        
     const colorLegend = [
-        '#ff0000', '#ffd700', '#00ffff', '#ff7373', '#0000ff', '#00ff00', '#ffff00', '#66cdaa', '#ff00ff', '#afeeee', 
+        '#ff0000', '#ffd700', '#00ffff', '#ff7373', '#ffff00', '#00ff00', '#ffff00', '#66cdaa', '#ff00ff', '#afeeee', 
         '#00ff7f', '#ff4040', '#ccff00', '#fef65b', '#ff4444', '#ff1493', '#6dc066', '#e6e6fa', '#ccff00', '#0099cc'
       ]
       
@@ -72,7 +72,7 @@ const dataGraph = (props) => {
             legendSpacing={5}
             tooltip={true}
             tooltipProps={tooltipProps}
-            fontSizeFactor={0.3}
+            fontSizeFactor={0.25}
             onClick={handleClick}
 
     />
