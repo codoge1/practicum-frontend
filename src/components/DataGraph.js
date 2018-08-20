@@ -16,7 +16,7 @@ const dataGraph = (props) => {
                 _id:index,
                 index:index,
                 classification:cluster.label,
-                value:1,
+                value:cluster.score,
                 number:cluster.docs.length,
                 displayText:cluster.label,
                 colorValue:Math.random() * 2 - 1

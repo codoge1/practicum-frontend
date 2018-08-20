@@ -85,6 +85,9 @@ const dataDetail = (props) => {
     let cpc = patent.cpc.join(', ')
     let citations = patent.citations.join(', ')
 
+    const description = patent.description.replace(/\n/g, '</br>')
+    const claims = patent.claims.replace(/\n/g, '</br>')
+    
     return (
         <div className={classes.root}>
             <Grid container spacing={24}>
@@ -98,7 +101,7 @@ const dataDetail = (props) => {
 
                     <br/>
                     <Typography style={{textAlign: 'center'}} variant="title" component="h4">
-                        Abstract
+                        <b>Abstract</b>
                     </Typography>
                     <br />
                     
@@ -107,7 +110,7 @@ const dataDetail = (props) => {
                     </Typography>
                     <br/>
                     <Typography style={{textAlign: 'center'}} variant="title">
-                        Description
+                        <b>Description</b>
                     </Typography>
                     <br />
                     <br />
@@ -115,15 +118,13 @@ const dataDetail = (props) => {
                     {/* <Highlighter textToHighlight='asfasdas <b>gesadasd</b>'
                                 searchWords={[]}/> */}
                     <Scrollbars style={{ width: '100%', height: 330, border:'1px solid gray',borderRadius:'15px' }}>
-                        <Typography style={{padding:10}} variant='body2'>
-                            {patent.description}
-                        </Typography>
+                    <div style={{'textAlign':'left','color':'black'}} dangerouslySetInnerHTML={{__html:  '<p>' + description + '</p>'}}></div>
                         {/* {patent.description} */}
                     </Scrollbars>
                     </div>
 
                     <Typography style={{textAlign: 'center', marginTop:'5%'}} variant="title">
-                        Claims
+                        <b>Claims</b>
                     </Typography>
                     <br />
                     <br />
@@ -131,9 +132,7 @@ const dataDetail = (props) => {
                     {/* <Highlighter textToHighlight='asfasdas <b>gesadasd</b>'
                                 searchWords={[]}/> */}
                     <Scrollbars style={{ width: '100%', height: 330, border:'1px solid gray',borderRadius:'15px' }}>
-                        <Typography style={{padding:10}} variant='body2'>
-                            {patent.claims}
-                        </Typography>
+                    <div style={{'textAlign':'left','color':'black'}} dangerouslySetInnerHTML={{__html:  '<p>' + claims + '</p>'}}></div>
                         {/* {patent.description} */}
                     </Scrollbars>
                     </div>

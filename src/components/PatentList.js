@@ -17,6 +17,7 @@ import {withRouter} from 'react-router'
 
 
 
+
 const patentList = (props) => {
     const { classes } = props;
     // const compare = (a, b) => {
@@ -37,13 +38,13 @@ const patentList = (props) => {
         return (<ExpansionPanel className={classes.root} key={el.id}>
             <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
 
-            <div style={{'textAlign':'left'}} dangerouslySetInnerHTML={{__html: el.name}}></div>
+            <div style={{'textAlign':'left', 'color':'black'}} dangerouslySetInnerHTML={{__html: el.name}}></div>
 
               {/* <Typography className={classes.heading}>Title: {el.name}</Typography> */}
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
               
-                <div style={{'textAlign':'left'}} dangerouslySetInnerHTML={{__html:  'Patent ID: ' + el.id + '</br></br>Abstract:  ' + el.patentAbstract}}></div>
+                <div style={{'textAlign':'left', 'color':'black'}} dangerouslySetInnerHTML={{__html:  'Patent ID: ' + el.id + '</br></br>Abstract:  ' + el.patentAbstract}}></div>
 
                 <Avatar style={{cursor:'pointer'}} onClick={() => chooseDetail(index)} className={classes.greenAvatar}>
                   <AssignmentIcon />
@@ -110,6 +111,9 @@ const patentList = (props) => {
 const styles = theme => ({
     root: {
       width: '100%',
+      b:{
+        backgroundColor:'yellow'
+      }
     },
     heading: {
       fontSize: theme.typography.pxToRem(15),
