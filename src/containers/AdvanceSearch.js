@@ -325,7 +325,7 @@ class Search extends Component {
                                                             <FormGroup row>
 
                                                                 <Typography style={{fontSize:40 - this.state.weight * 0.4}} variant="caption">
-                                                                    Novel Feature
+                                                                Invention Disclosure
                                                                 </Typography>
                                                                 <Slider onChange={(value) => this.changeWeight(value)}
                                                                         marks={{0:'0%',
@@ -344,7 +344,7 @@ class Search extends Component {
 
                                                         <FormControl fullWidth className={classes.formControl} >
                                                             <Typography  style={{fontSize:this.state.weight * 0.4}} variant="caption" align='right'>
-                                                                Invention Disclosure
+                                                                Novel Feature
                                                             </Typography>
                                                         </FormControl>
 
