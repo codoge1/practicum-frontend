@@ -44,7 +44,7 @@ const patentList = (props) => {
     // patents.sort(compare);
     console.log(patents)
     const list = patents.map((el, index) => {
-        return (<ExpansionPanel className={classes.root} key={el.id}>
+        return (<ExpansionPanel defaultExpanded className={classes.root} key={el.id}>
             <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
 
             <div style={{'textAlign':'left', 'color':'black'}} dangerouslySetInnerHTML={{__html: el.name}}></div>
@@ -53,7 +53,7 @@ const patentList = (props) => {
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
               
-                <div style={{'textAlign':'left', 'color':'black'}} dangerouslySetInnerHTML={{__html:  'Patent ID: ' + el.id + '</br></br>Abstract:  ' + el.patentAbstract}}></div>
+                <div style={{'textAlign':'left', 'color':'black'}} dangerouslySetInnerHTML={{__html:  el.id + '</br></br>' + el.patentAbstract}}></div>
 
                 <Avatar style={{cursor:'pointer'}} onClick={() => chooseDetail(index)} className={classes.greenAvatar}>
                   <AssignmentIcon />
