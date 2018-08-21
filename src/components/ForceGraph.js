@@ -72,11 +72,11 @@ const forceGraph = (props) => {
     return (
         <InteractiveForceGraph
             // zoom
-            simulationOptions={{ height: 400, width: 500 }}
+            simulationOptions={{ height: 350, width: 450 }}
             labelAttr="label"
             // onSelectNode={(node) => console.log(node)}
             highlightDependencies
-            strokeWidth='40'
+            strokeWidth='60'
             >
             <ForceGraphNode node={{ id: patent.id, label: 'Origin' }} fill="red" />
             {firstLevelNode}

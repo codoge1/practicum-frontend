@@ -4,7 +4,9 @@ const initialState = {
     simpleInput:'',
     
 
-    advancedData:{},
+    lingo:{},
+    kmeans:{},
+    stc:{},
     classData:[],
     patent:{},
 }
@@ -27,10 +29,20 @@ const reducer = (state = initialState, action) => {
                 simpleIndex:action.index,
                 patent:state.simpleData[action.index]
             }
-        case ('advancedData'):
+        case ('lingo'):
             return {
                 ...state,
-                advancedData:action.data
+                lingo:action.data
+            }
+        case ('kmeans'):
+            return {
+                ...state,
+                kmeans:action.data
+            }
+        case ('stc'):
+            return {
+                ...state,
+                stc:action.data
             }
         case ('classData'):
             return {

@@ -220,7 +220,9 @@ class Search extends Component {
         if (this.state.select === '3') {
             searchBy += "&claim=true"
         }
-        const url = 'http://three10-1714580309.us-east-2.elb.amazonaws.com/api/search?method=lingo&q='  + invention + searchBy + '&nf=' + noval + '&bst=' + weight
+        const url1 = 'http://three10-1714580309.us-east-2.elb.amazonaws.com/api/search?method=lingo&q='  + invention + searchBy + '&nf=' + noval + '&bst=' + weight
+        const url2 = 'http://three10-1714580309.us-east-2.elb.amazonaws.com/api/search?method=kmeans&q='  + invention + searchBy + '&nf=' + noval + '&bst=' + weight
+        const url3 = 'http://three10-1714580309.us-east-2.elb.amazonaws.com/api/search?method=stc&q='  + invention + searchBy + '&nf=' + noval + '&bst=' + weight
         // console.log(url)
         this.setState({showSpinner:true,
                         showResult:true,
@@ -265,8 +267,11 @@ class Search extends Component {
         //     }
         
         // this.setState({data:newData})
-
-        axios.get(url)
+        let finish1 = false
+        let finish2 = false
+        let finish3 = false
+        //lingo
+        axios.get(url1)
         .then((res) => {
             console.log(res)
             const newData = res['data']
@@ -274,9 +279,56 @@ class Search extends Component {
             // console.log(newData)
             // this.handleSearch()
             this.setState({showGraph:true,
-                            showSpinner:false})
-            this.props.updataData(newData)
-            this.props.history.push('/advanced/result')
+                            })
+            this.props.updateLingo(newData)
+
+            finish1 = true
+            if (finish1 && finish2 && finish3) {
+                this.setState({showSpinner:false})
+                this.props.history.push('/advanced/result')
+            }
+        })
+        .catch((e) => {
+            console.log(e)
+        })
+
+        //kmeans
+        axios.get(url2)
+        .then((res) => {
+            console.log(res)
+            const newData = res['data']
+            // this.setState({data:newData})
+            // console.log(newData)
+            // this.handleSearch()
+            this.setState({showGraph:true,
+                            })
+            this.props.updateKmeans(newData)
+            finish2 = true
+            if (finish1 && finish2 && finish3) {
+                this.setState({showSpinner:false})
+                this.props.history.push('/advanced/result')
+            }
+        })
+        .catch((e) => {
+            console.log(e)
+        })
+
+        //stc
+        axios.get(url3)
+        .then((res) => {
+            console.log(res)
+            const newData = res['data']
+            // this.setState({data:newData})
+            // console.log(newData)
+            // this.handleSearch()
+            this.setState({showGraph:true,
+                            })
+            this.props.updateStc(newData)
+            finish3 = true
+            if (finish1 && finish2 && finish3) {
+                this.setState({showSpinner:false})
+                this.props.history.push('/advanced/result')
+            }
         })
         .catch((e) => {
             console.log(e)
@@ -488,7 +540,9 @@ class Search extends Component {
     
     const mapDispatchToProps = (dispatch) => {
         return {
-            updataData:(data) => dispatch({type:'advancedData', data:data}),
+            updateLingo:(data) => dispatch({type:'lingo', data:data}),
+            updateKmeans:(data) => dispatch({type:'kmeans', data:data}),
+            updateStc:(data) => dispatch({type:'stc', data:data}),
             // updateClassIndex:(classIndex) => dispatch({type:'advancedClassIndex', classIndex:classIndex}),
             // updateIndex:(index) => dispatch({type:'advancedIndex', index:index})
         }

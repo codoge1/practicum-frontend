@@ -10,13 +10,21 @@ import {withRouter} from 'react-router'
 
 const dataGraph = (props) => {
     console.log(props)
-        const rawData = props.data.clusters
+    let rawData = {}
+    if (props.select === 'Lingo') {
+        rawData = props.lingo.clusters
+    } else if (props.select === 'Kmeans') {
+        rawData = props.kmeans.clusters
+    } else if (props.select === 'STC') {
+        rawData = props.stc.clusters
+    }
+    console.log(props.select)
         const data = rawData.map((cluster, index) => {
             return {
                 _id:index,
                 index:index,
                 classification:cluster.label,
-                value:cluster.score,
+                value:cluster.score === 0.0 ? 1 : cluster.score,
                 number:cluster.docs.length,
                 displayText:cluster.label,
                 colorValue:Math.random() * 2 - 1
@@ -41,7 +49,7 @@ const dataGraph = (props) => {
 
 
     const handleClick = (event) => {
-        let data = props.data.clusters[event.index]
+        let data = rawData[event.index]
         props.updateClassData(data)
         // props.history.push('/advanced/classification/patentsList')
     }
@@ -111,7 +119,9 @@ const styles = theme => ({
 const mapStateToProps = (state) => {
     // console.log(state)
     return {
-        data:state.advancedData
+        lingo:state.lingo,
+        kmeans:state.kmeans,
+        stc:state.stc,
     }
 }
 

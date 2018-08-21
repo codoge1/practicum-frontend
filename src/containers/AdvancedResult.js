@@ -10,6 +10,8 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 import { Scrollbars } from 'react-custom-scrollbars';
+import Button from '@material-ui/core/Button';
+import { connect } from 'react-redux';
 
 
 
@@ -17,7 +19,7 @@ import { Scrollbars } from 'react-custom-scrollbars';
 
 class AdvancedResult extends Component {
     state = {
-        select:'',
+        select:'Lingo',
     }
 
     handleChange = name => event => {
@@ -53,15 +55,18 @@ class AdvancedResult extends Component {
                         </FormControl>
                         </div>
                         <Paper className={classes.paper}>
-                            <DataGraph />
+                            <DataGraph select={this.state.select}/>
                         </Paper>
                     </Grid>
                     <Grid item xs={6}>
                    
                         <Paper className={classes.paper}>
-                        <Scrollbars style={{ width: '100%', height: 652, border:'1px gray',borderRadius:'15px' }}>
-                            <PatentList />
+                        <Scrollbars style={{ width: '95%', height: 602, border:'1px gray',borderRadius:'15px' }}>
+                            <PatentList select={this.state.select}/>
                         </Scrollbars>
+                        <Button className={classes.button} variant="contained" onClick={this.props.clearClassData} color="primary">
+                            Show All Patents
+                        </Button>
                         </Paper>
                         
                     </Grid>
@@ -80,6 +85,25 @@ const styles = theme => ({
       textAlign: 'center',
       color: theme.palette.text.secondary,
     },
+    button: {
+        margin: theme.spacing.unit,
+      },
   });
 
-export default withStyles(styles)(AdvancedResult)
+
+
+  const mapStateToProps = (state) => {
+    return {
+
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        clearClassData:() => dispatch({type:'classData', classData:[]}),
+        
+        
+    }
+}
+
+export default withStyles(styles)(connect(mapStateToProps, mapDispatchToProps)(AdvancedResult))

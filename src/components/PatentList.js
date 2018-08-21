@@ -28,9 +28,16 @@ const patentList = (props) => {
     //   }
     //   return 0;
     // }
+    let select = props.select
     let patents = props.classData.docs
     if (patents === undefined) {
-      patents = props.advancedData.patents
+      if (props.select === 'Lingo') {
+        patents = props.lingo.patents
+    } else if (props.select === 'Kmeans') {
+        patents = props.kmeans.patents
+    } else if (props.select === 'STC') {
+        patents = props.stc.patents
+    }
     }
     // patents.sort(compare);
     console.log(patents)
@@ -145,7 +152,9 @@ classes: PropTypes.object.isRequired,
 const mapStateToProps = (state) => {
   return {
       classData:state.classData,
-      advancedData:state.advancedData
+      lingo:state.lingo,
+      kmeans:state.kmeans,
+      stc:state.stc,
   }
 }
 

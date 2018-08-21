@@ -159,7 +159,7 @@ const dataDetail = (props) => {
 
                     <Paper style={{marginTop:'3%'}} className={classes.paper}>
                         <Typography variant="body2">
-                            <b>Application ID:</b> {patent.id}
+                        <b>Application ID:</b> {patent.id}
                         </Typography>
                         <Typography variant="body2">
                         <b>Family ID:</b> {patent.familyId}
