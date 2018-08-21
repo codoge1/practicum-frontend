@@ -14,6 +14,8 @@ import Aux from '../hoc/Aux'
 import Button from '@material-ui/core/Button';
 import axios from 'axios'
 import {withRouter} from 'react-router'
+import boldClass from './DataList.css'
+
 
 
 
@@ -87,8 +89,8 @@ const patentList = (props) => {
     let classification = props.classData.label === undefined ? 'All Results' : 'Classification: ' + props.classData.label
 
     return (
-      <Aux>
-        <div className={classes.root}>
+      <Aux className={boldClass}>
+        <div>
         <Typography variant="headline" gutterBottom>
           {classification}
         </Typography>
@@ -118,9 +120,6 @@ const patentList = (props) => {
 const styles = theme => ({
     root: {
       width: '100%',
-      b:{
-        backgroundColor:'yellow'
-      }
     },
     heading: {
       fontSize: theme.typography.pxToRem(15),

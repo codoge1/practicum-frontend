@@ -21,7 +21,7 @@ const dataGraph = (props) => {
     console.log(props.select)
         const data = rawData.map((cluster, index) => {
             return {
-                _id:index,
+                _id:props.select + index,
                 index:index,
                 classification:cluster.label,
                 value:cluster.score === 0.0 ? 1 : cluster.score,
@@ -38,8 +38,8 @@ const dataGraph = (props) => {
       
 
     const tooltipProps = [{
-        css: 'symbol',
-        prop: 'classification',
+        css: 'change',
+        prop: 'displayText',
         display:'Classification'
     }, {
         css: 'value',
