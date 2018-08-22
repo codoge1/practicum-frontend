@@ -82,13 +82,13 @@ const dataList = (props) => {
       <Aux>
         <div className={classes.root}>
         {list}
-        <Button className={classes.button} variant="contained" onClick={switchToGraph} color="primary">
+        <Button className={classes.button} style={{backgroundColor:'#2874F0'}} variant="contained" onClick={switchToGraph} color="primary">
               Show as Graph
         </Button>
-        <Button className={classes.button} variant="contained" onClick={goBack} color="primary">
+        <Button className={classes.button} style={{backgroundColor:'#2874F0'}} variant="contained" onClick={goBack} color="primary">
               Return
         </Button>
-        <Button className={classes.button} variant="contained" onClick={returnToSearch} color="primary">
+        <Button className={classes.button} style={{backgroundColor:'lightgray', color:'black'}} variant="contained" onClick={returnToSearch} color="primary">
             Back to Search
         </Button>
         </div>
@@ -129,7 +129,7 @@ classes: PropTypes.object.isRequired,
   
 const mapStateToProps = (state) => {
   return {
-      data:state.advancedData
+      data:state.lingo
   }
 }
 

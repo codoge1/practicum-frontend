@@ -64,7 +64,7 @@ class AdvancedResult extends Component {
                         <Scrollbars style={{ width: '95%', height: 602, border:'1px gray',borderRadius:'15px' }}>
                             <PatentList select={this.state.select}/>
                         </Scrollbars>
-                        <Button className={classes.button} variant="contained" onClick={this.props.clearClassData} color="primary">
+                        <Button className={classes.button} style={{backgroundColor:'#2874F0'}} variant="contained" onClick={this.props.clearClassData} color="primary">
                             Show All Patents
                         </Button>
                         </Paper>

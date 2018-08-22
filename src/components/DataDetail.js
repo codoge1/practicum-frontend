@@ -141,11 +141,11 @@ const dataDetail = (props) => {
                 </div>
                 <div>
                 
-                <Button className={classes.button} variant="contained" onClick={goBack} color="primary">
+                <Button className={classes.button} style={{backgroundColor:'#2874F0'}} variant="contained" onClick={goBack} color="primary">
                                                                     Return
                                                                     </Button>
                 
-                <Button className={classes.button} variant="contained" onClick={goBackToSearch} color="primary">
+                <Button className={classes.button} style={{backgroundColor:'lightgray', color:'black'}} variant="contained" onClick={goBackToSearch} color="primary">
                                                                     Return to Search
                                                                     </Button>
                 </div>

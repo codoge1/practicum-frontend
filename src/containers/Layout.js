@@ -42,6 +42,7 @@ class SimpleTabs extends React.Component {
         <AppBar position="static">
         <Tabs
           value={value}
+          style={{backgroundColor:'#2874F0'}}
           onChange={this.handleChange}
           classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}
         >

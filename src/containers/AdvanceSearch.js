@@ -340,7 +340,7 @@ class Search extends Component {
 
         const query = this.state.showResult ? null :     <Grid container className={classes.root}>
                                                             <Grid style={{marginTop:'5%', marginRight:'2%'}} item xs={2}>
-                                                                <Paper style={{height:'70%'}}>
+                                                                <Paper style={{height:'70%', backgroundColor:'#FAFAFA'}}>
                                                                     <FormLabel style={{textAlign:'left'}}>Search By</FormLabel>
                                                                     <RadioGroup
                                                                         style={{margin:10}}
@@ -355,7 +355,7 @@ class Search extends Component {
                                                                 </Paper>
                                                             </Grid>
 
-                                                            <Grid item xs={9}>
+                                                            <Grid style={{backgroundColor:'#FAFAFA'}} item xs={9}>
                                                                 <Typography style={{textAlign:'left'}} variant="display3" color='inherit' gutterBottom>
                                                                     Advanced Search
        
@@ -403,7 +403,7 @@ class Search extends Component {
                                                         <FormControl fullWidth className={classes.formControl}>
                                                             <FormGroup row>
                                                                 <Button className={classes.button} variant="contained" color="primary" onClick={this.search}>Search</Button>
-                                                                <Button className={classes.button} variant="contained" color="secondary" onClick={this.handleSwitch}>Simple Search</Button>
+                                                                <Button className={classes.button} style={{backgroundColor:'lightgray', color:'black'}} variant="contained" color="secondary" onClick={this.handleSwitch}>Simple Search</Button>
                                                             </FormGroup>
                                                         </FormControl>
 
@@ -524,6 +524,7 @@ class Search extends Component {
         },
         button: {
             margin: theme.spacing.unit,
+            backgroundColor:'#2874F0'
           },
     });
 

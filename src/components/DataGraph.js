@@ -84,13 +84,13 @@ const dataGraph = (props) => {
             onClick={handleClick}
 
     />
-        <Button className={classes.button} variant="contained" onClick={switchToList} color="primary">
+        <Button className={classes.button} style={{backgroundColor:'#2874F0'}} variant="contained" onClick={switchToList} color="primary">
             Show as List
         </Button>
-        <Button className={classes.button} variant="contained" onClick={goBack} color="primary">
+        <Button className={classes.button} style={{backgroundColor:'#2874F0'}} variant="contained" onClick={goBack} color="primary">
             Return
         </Button>
-        <Button className={classes.button} variant="contained" onClick={returnToSearch} color="primary">
+        <Button className={classes.button} style={{backgroundColor:'lightgray', color:'black'}} variant="contained" onClick={returnToSearch} color="primary">
             Back to Search
         </Button>
         </Aux>

@@ -78,7 +78,7 @@ const AllPatents = (props) => {
         {/* <Button className={classes.button} variant="contained" onClick={() => switchToGraph()} color="primary">
                                                             Show All as Graph
                                                          </Button> */}
-        <Button className={classes.button} variant="contained" onClick={() => goBack()} color="primary">
+        <Button className={classes.button} style={{backgroundColor:'lightgray', color:'black'}} variant="contained" onClick={() => goBack()} color="primary">
                                                             Return
                                                             </Button>
         </div>
