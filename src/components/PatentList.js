@@ -53,7 +53,7 @@ const patentList = (props) => {
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
               
-                <div style={{'textAlign':'left', 'color':'black'}} dangerouslySetInnerHTML={{__html:  el.id + '</br></br>' + el.patentAbstract}}></div>
+                <div style={{'textAlign':'left', 'color':'black', width:'90%'}} dangerouslySetInnerHTML={{__html:  el.id + '</br></br>' + el.patentAbstract}}></div>
 
                 <Avatar style={{cursor:'pointer'}} onClick={() => chooseDetail(index)} className={classes.greenAvatar}>
                   <AssignmentIcon />

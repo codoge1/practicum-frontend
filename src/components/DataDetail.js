@@ -101,7 +101,7 @@ const dataDetail = (props) => {
 
                     <br/>
                     <Typography style={{textAlign: 'center'}} variant="title" component="h4">
-                        <b style={{'background-color':'white'}}>Abstract</b>
+                        <b style={{'backgroundColor':'white'}}>Abstract</b>
                     </Typography>
                     <br />
                     
@@ -110,7 +110,7 @@ const dataDetail = (props) => {
                     </Typography>
                     <br/>
                     <Typography style={{textAlign: 'center'}} variant="title">
-                        <b style={{'background-color':'white'}}>Description</b>
+                        <b style={{'backgroundColor':'white'}}>Description</b>
                     </Typography>
                     <br />
                     <br />
@@ -124,7 +124,7 @@ const dataDetail = (props) => {
                     </div>
 
                     <Typography style={{textAlign: 'center', marginTop:'5%'}} variant="title">
-                        <b style={{'background-color':'white'}}>Claims</b>
+                        <b style={{'backgroundColor':'white'}}>Claims</b>
                     </Typography>
                     <br />
                     <br />
@@ -159,25 +159,25 @@ const dataDetail = (props) => {
 
                     <Paper style={{marginTop:'3%'}} className={classes.paper}>
                         <Typography variant="body2">
-                        <b style={{'background-color':'white'}}>Application ID:</b> {patent.id}
+                        <b style={{'backgroundColor':'white'}}>Application ID:</b> {patent.id}
                         </Typography>
                         <Typography variant="body2">
-                        <b  style={{'background-color':'white'}}>Family ID:</b> {patent.familyId}
+                        <b  style={{'backgroundColor':'white'}}>Family ID:</b> {patent.familyId}
                         </Typography>
                         <Typography variant="body2">
-                        <b style={{'background-color':'white'}}>Filing Date:</b> {filingDate}
+                        <b style={{'backgroundColor':'white'}}>Filing Date:</b> {filingDate}
                         </Typography>
                         <Typography variant="body2">
-                        <b style={{'background-color':'white'}}>Grant Date:</b> {grantDate}
+                        <b style={{'backgroundColor':'white'}}>Grant Date:</b> {grantDate}
                         </Typography>
                         <Typography variant="body2">
-                        <b style={{'background-color':'white'}}>Publication Date:</b> {publicationDate}
+                        <b style={{'backgroundColor':'white'}}>Publication Date:</b> {publicationDate}
                         </Typography>
                         <Typography variant="body2">
-                        <b style={{'background-color':'white'}}>CPC:</b> {cpc}
+                        <b style={{'backgroundColor':'white'}}>CPC:</b> {cpc}
                         </Typography>
                         <Typography variant="body2">
-                        <b style={{'background-color':'white'}}> Assignee:</b> {patent.assignee}
+                        <b style={{'backgroundColor':'white'}}> Assignee:</b> {patent.assignee}
                         </Typography>
                         {/* <Typography variant="body2">
                             Citations: {citations}

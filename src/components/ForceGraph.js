@@ -53,7 +53,7 @@ const forceGraph = (props) => {
     const secondLevelNode = secondLevel.map((citation, index) => {
         // console.log(citation)
         return (
-            <ForceGraphNode key={citations[index] + '#'} node={{ id: citation, label: citation }} fill="red" />
+            <ForceGraphNode key={citation + '#'} node={{ id: citation, label: citation }} fill="red" />
         )
     })
     //some more second level nodes
