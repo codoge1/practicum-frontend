@@ -27,7 +27,7 @@ TabContainer.propTypes = {
 
 class SimpleTabs extends React.Component {
   state = {
-    value: 1,
+    value: 0,
   };
 
   handleChange = (event, value) => {
@@ -49,6 +49,7 @@ class SimpleTabs extends React.Component {
         >
           <Tab 
             disableRipple
+            selected
             classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
             label={<Avatar src={Logo} className={classes.bigAvatar}></Avatar>}
           />

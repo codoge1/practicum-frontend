@@ -72,7 +72,7 @@ const forceGraph = (props) => {
     return (
         <InteractiveForceGraph
             // zoom
-            simulationOptions={{ height: 350, width: 450 }}
+            simulationOptions={{ height: 1050, width: 1050}}
             labelAttr="label"
             // onSelectNode={(node) => console.log(node)}
             highlightDependencies

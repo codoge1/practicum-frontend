@@ -287,7 +287,7 @@ class Search extends Component {
             this.setState({showGraph:true,
                             })
             this.props.updateLingo(newData)
-
+            this.props.clearClassData()
             finish1 = true
             if (finish1 && finish2 && finish3) {
                 this.setState({showSpinner:false})
@@ -315,6 +315,7 @@ class Search extends Component {
             this.setState({showGraph:true,
                             })
             this.props.updateKmeans(newData)
+            this.props.clearClassData()
             finish2 = true
             if (finish1 && finish2 && finish3) {
                 this.setState({showSpinner:false})
@@ -342,6 +343,7 @@ class Search extends Component {
             this.setState({showGraph:true,
                             })
             this.props.updateStc(newData)
+            this.props.clearClassData()
             finish3 = true
             if (finish1 && finish2 && finish3) {
                 this.setState({showSpinner:false})
@@ -573,6 +575,7 @@ class Search extends Component {
             updateLingo:(data) => dispatch({type:'lingo', data:data}),
             updateKmeans:(data) => dispatch({type:'kmeans', data:data}),
             updateStc:(data) => dispatch({type:'stc', data:data}),
+            clearClassData:() => dispatch({type:'classData', classData:[]})
             // updateClassIndex:(classIndex) => dispatch({type:'advancedClassIndex', classIndex:classIndex}),
             // updateIndex:(index) => dispatch({type:'advancedIndex', index:index})
         }

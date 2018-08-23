@@ -30,7 +30,7 @@ const patentList = (props) => {
       }
       return 0;
     }
-    let select = props.select
+    // let select = props.select
     let patents = props.classData.docs
     if (patents === undefined) {
       if (props.select === 'Lingo') {
