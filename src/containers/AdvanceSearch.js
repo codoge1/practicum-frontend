@@ -339,8 +339,8 @@ class Search extends Component {
         const { classes } = this.props;
 
         const query = this.state.showResult ? null :     <Grid container className={classes.root}>
-                                                            <Grid style={{marginTop:'5%', marginRight:'2%'}} item xs={2}>
-                                                                <Paper style={{height:'70%', backgroundColor:'#FAFAFA'}}>
+                                                            <Grid style={{marginTop:'0%', marginRight:'2%'}} item xs={2}>
+                                                                <Paper style={{height:'50%', backgroundColor:'#FAFAFA'}}>
                                                                     <FormLabel style={{textAlign:'left'}}>Search By</FormLabel>
                                                                     <RadioGroup
                                                                         style={{margin:10}}
@@ -355,7 +355,7 @@ class Search extends Component {
                                                                 </Paper>
                                                             </Grid>
 
-                                                            <Grid style={{backgroundColor:'#FAFAFA'}} item xs={9}>
+                                                            <Grid style={{backgroundColor:'#FAFAFA', padding:'30px', borderRadius:10}} item xs={9}>
                                                                 <Typography style={{textAlign:'left'}} variant="display3" color='inherit' gutterBottom>
                                                                     Advanced Search
        
@@ -386,9 +386,19 @@ class Search extends Component {
                                                                                 60:'60%',
                                                                                 80:'80%',
                                                                                 100:'100%'}}
+                                                                        handleStyle={{
+                                                                            borderColor: 'black',
+                                                                            height: 18,
+                                                                            width: 18,
+                                                                            marginLeft: -14,
+                                                                            marginTop: -7,
+                                                                            backgroundColor: 'white',
+                                                                            }}
+                                                                        railStyle={{ backgroundColor: 'lightgrey', height: 3 }}
                                                                         min={0} max={100}
                                                                         defaultValue={50}
                                                                         value={this.state.weight}
+                                                                        trackStyle={{ backgroundColor: '#2874F0', height: 3 }}
                                                                         handle={this.handleSlider}/>
 
                                                             </FormGroup>

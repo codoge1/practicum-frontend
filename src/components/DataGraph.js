@@ -67,6 +67,9 @@ const dataGraph = (props) => {
       }
 
     const {classes} = props
+
+     
+
     return(
         <Aux>
         <ReactBubbleChart
@@ -75,9 +78,9 @@ const dataGraph = (props) => {
             data={data}
             selectedColor="red"
             selectedTextColor="#d9d9d9"
-            fixedDomain={{min: -1, max: 1}}
-            legend={false}
-            legendSpacing={5}
+            // fixedDomain={{min: -1, max: 1}}
+            // legend={true}
+            // legendSpacing={5}
             tooltip={true}
             tooltipProps={tooltipProps}
             fontSizeFactor={0.22}
@@ -94,15 +97,17 @@ const dataGraph = (props) => {
             Back to Search
         </Button>
         </Aux>
+        
     )
 }
 
+
 const styles = theme => ({
     container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    paddingLeft: 300,
-    paddingRight: 300,
+        display: 'flex',
+        flexWrap: 'wrap',
+        paddingLeft: 300,
+        paddingRight: 300,
     },
     formControl: {
         margin: theme.spacing.unit,

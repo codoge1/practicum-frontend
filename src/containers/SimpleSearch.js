@@ -199,7 +199,7 @@ class Search extends Component {
 
         const query = this.state.showResult ? null :
                                                 <Grid container className={classes.root}>
-                                                    <Grid style={{marginTop:'5%', marginRight:'2%'}} item xs={2}>
+                                                    <Grid style={{marginTop:'0%', marginRight:'2%'}} item xs={2}>
                                                         <Paper style={{backgroundColor:'#FAFAFA', height:'70%'}} >
                                                             <FormLabel style={{textAlign:'left'}}>Search By</FormLabel>
                                                             <RadioGroup
@@ -215,7 +215,7 @@ class Search extends Component {
                                                         </Paper>
                                                     </Grid>
 
-                                                    <Grid item style={{backgroundColor:'#FAFAFA'}} xs={9}>
+                                                    <Grid item style={{backgroundColor:'#FAFAFA', borderRadius:10, padding:'30px'}} xs={9}>
                                                         <Typography style={{textAlign:'left'}} variant="display3" color='inherit' gutterBottom>
                                                             Begin Your Search!
                                                         </Typography>

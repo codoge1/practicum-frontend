@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -27,7 +28,12 @@ class AdvancedResult extends Component {
         this.setState({ [name]: event.target.value });
     }
 
-
+    componentDidMount = () => {
+        // console.log(ReactDOM.unmountComponentAtNode(document.getElementsByClassName('bubble-legend')[0]));
+        let node = document.getElementsByClassName('bubble-legend')[0]
+        node.style.height = '0px'
+        console.log('here')
+      }
 
     render() {
         const { classes } = this.props;
@@ -36,7 +42,7 @@ class AdvancedResult extends Component {
             <div>
                 <Grid container spacing={24}>
                     <Grid item xs={6}>
-                    <Paper className={classes.paper} style={{display:'flex',flexDirection:'column'}}>
+                    <Paper className={classes.paper} style={{display:'flex',flexDirection:'column', height:'96%'}}>
                         <FormControl style={{textAlign:'center', float:'left',paddingLeft:'3%', width:'12%'}}>
                             {/* <InputLabel htmlFor="age-native-simple">Age</InputLabel> */}
                             <Select
@@ -62,8 +68,8 @@ class AdvancedResult extends Component {
                     </Grid>
                     <Grid item xs={6}>
                    
-                        <Paper className={classes.paper}>
-                        <Scrollbars style={{ width: '95%', height: 602, border:'1px gray',borderRadius:'15px' }}>
+                        <Paper className={classes.paper} style={{height:'96%'}}>
+                        <Scrollbars style={{ width: '95%', height: '92%', border:'1px gray',borderRadius:'15px' }}>
                             <PatentList select={this.state.select}/>
                         </Scrollbars>
                         <Button className={classes.button} style={{backgroundColor:'#2874F0'}} variant="contained" onClick={this.props.clearClassData} color="primary">
