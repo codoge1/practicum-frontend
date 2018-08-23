@@ -271,7 +271,13 @@ class Search extends Component {
         let finish2 = false
         let finish3 = false
         //lingo
-        axios.get(url1)
+        axios({
+            url:url1,
+            method:'get',
+            headers:{
+                'Cache-Control': 'max-age=1800'
+            }
+        })
         .then((res) => {
             console.log(res)
             const newData = res['data']
@@ -293,7 +299,13 @@ class Search extends Component {
         })
 
         //kmeans
-        axios.get(url2)
+        axios({
+            url:url2,
+            method:'get',
+            headers:{
+                'Cache-Control': 'max-age=1800'
+            }
+        })
         .then((res) => {
             console.log(res)
             const newData = res['data']
@@ -314,7 +326,13 @@ class Search extends Component {
         })
 
         //stc
-        axios.get(url3)
+        axios({
+            url:url3,
+            method:'get',
+            headers:{
+                'Cache-Control': 'max-age=1800'
+            }
+        })
         .then((res) => {
             console.log(res)
             const newData = res['data']
