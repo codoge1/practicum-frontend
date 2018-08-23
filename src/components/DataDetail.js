@@ -118,7 +118,7 @@ const dataDetail = (props) => {
                     {/* <Highlighter textToHighlight='asfasdas <b>gesadasd</b>'
                                 searchWords={[]}/> */}
                     <Scrollbars style={{ width: '100%', height: 330, border:'1px solid gray',borderRadius:'15px' }}>
-                    <div style={{'textAlign':'left','color':'black'}} dangerouslySetInnerHTML={{__html:  '<p>' + description + '</p>'}}></div>
+                    <div style={{'textAlign':'left','color':'black', paddingLeft:15}} dangerouslySetInnerHTML={{__html:  '<p>' + description + '</p>'}}></div>
                         {/* {patent.description} */}
                     </Scrollbars>
                     </div>
@@ -132,7 +132,7 @@ const dataDetail = (props) => {
                     {/* <Highlighter textToHighlight='asfasdas <b>gesadasd</b>'
                                 searchWords={[]}/> */}
                     <Scrollbars style={{ width: '100%', height: 330, border:'1px solid gray',borderRadius:'15px' }}>
-                    <div style={{'textAlign':'left','color':'black'}} dangerouslySetInnerHTML={{__html:  '<p>' + claims + '</p>'}}></div>
+                    <div style={{'textAlign':'left','color':'black', paddingLeft:15}} dangerouslySetInnerHTML={{__html:  '<p>' + claims + '</p>'}}></div>
                         {/* {patent.description} */}
                     </Scrollbars>
                     </div>
