@@ -32,9 +32,8 @@ const dataGraph = (props) => {
         })
        
     const colorLegend = [
-        '#ff0000', '#ffd700', '#00ffff', '#ff7373', '#ffff00', '#00ff00', '#ffff00', '#66cdaa', '#ff00ff', '#afeeee', 
-        '#00ff7f', '#ff4040', '#ccff00', '#fef65b', '#ff4444', '#ff1493', '#6dc066', '#e6e6fa', '#ccff00', '#0099cc'
-      ]
+        '#ffc0cb', '#ffe4e1', '#ffd700', '#00ffff', '#e6e6fa', '#d3ffce', '#7fffd4', '#00ff00', '#fff68f', '#00ff7f', 
+        '#ffff66', '#b6fcd5', '#fa8072', '#40e0d0']
       
 
     const tooltipProps = [{
@@ -54,17 +53,7 @@ const dataGraph = (props) => {
         // props.history.push('/advanced/classification/patentsList')
     }
             
-    const goBack = () => {
-        props.history.goBack()
-    }
-
-    const switchToList = () => {
-        props.history.push('/advanced/classificationList')
-    }
-
-    const returnToSearch = () => {
-        props.history.push('/advanced')
-      }
+    
 
     const {classes} = props
 
@@ -87,15 +76,8 @@ const dataGraph = (props) => {
             onClick={handleClick}
 
     />
-        <Button className={classes.button} style={{backgroundColor:'#2874F0'}} variant="contained" onClick={switchToList} color="primary">
-            Show as List
-        </Button>
-        <Button className={classes.button} style={{backgroundColor:'#2874F0'}} variant="contained" onClick={goBack} color="primary">
-            Return
-        </Button>
-        <Button className={classes.button} style={{backgroundColor:'lightgray', color:'black'}} variant="contained" onClick={returnToSearch} color="primary">
-            Back to Search
-        </Button>
+        
+
         </Aux>
         
     )

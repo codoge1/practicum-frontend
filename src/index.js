@@ -17,5 +17,5 @@ const app = (
     </BrowserRouter>
 )
 ReactDOM.render(app, document.getElementById('root'));
-// ReactDOM.unmountComponentAtNode(document.getElementsByClassName('bubble-legend')[0]);
+
 registerServiceWorker();
