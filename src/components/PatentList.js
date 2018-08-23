@@ -47,7 +47,7 @@ const patentList = (props) => {
         return (<ExpansionPanel defaultExpanded className={classes.root} key={el.id}>
             <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
 
-            <div style={{'textAlign':'left', 'color':'black'}} dangerouslySetInnerHTML={{__html: el.name}}></div>
+            <div style={{'textAlign':'left', 'color':'black'}} dangerouslySetInnerHTML={{__html: '<b style="background-color:white">' + el.name + '</b>'}}></div>
 
               {/* <Typography className={classes.heading}>Title: {el.name}</Typography> */}
             </ExpansionPanelSummary>

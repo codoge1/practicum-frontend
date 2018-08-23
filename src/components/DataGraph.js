@@ -40,11 +40,11 @@ const dataGraph = (props) => {
     const tooltipProps = [{
         css: 'change',
         prop: 'displayText',
-        display:'Classification'
+        display:''
     }, {
         css: 'value',
         prop: 'number',
-        display: 'Number of Patents'
+        display: 'Patents'
     }];
 
 

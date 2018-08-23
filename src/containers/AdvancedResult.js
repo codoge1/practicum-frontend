@@ -33,19 +33,19 @@ class AdvancedResult extends Component {
         const { classes } = this.props;
 
         return (
-            <div className={classes.root}>
+            <div>
                 <Grid container spacing={24}>
                     <Grid item xs={6}>
-                    <div style={{float:'left', paddingLeft:'3%'}}>
-                        <FormControl>
+                    <Paper className={classes.paper} style={{display:'flex',flexDirection:'column'}}>
+                        <FormControl style={{textAlign:'center', float:'left',paddingLeft:'3%', width:'12%'}}>
                             {/* <InputLabel htmlFor="age-native-simple">Age</InputLabel> */}
                             <Select
                                 native
                                 value={this.state.select}
                                 onChange={this.handleChange('select')}
                                 inputProps={{
-                                name: 'age',
-                                id: 'age-native-simple',
+                                    name: 'age',
+                                    id: 'age-native-simple',
                                 }}
                             >
                                 <option value='Lingo'>Lingo</option>
@@ -53,9 +53,11 @@ class AdvancedResult extends Component {
                                 <option value='STC'>STC</option>
                             </Select>
                         </FormControl>
-                        </div>
-                        <Paper className={classes.paper}>
+                        <br />
+                        <div>
                             <DataGraph select={this.state.select}/>
+                        </div>
+
                         </Paper>
                     </Grid>
                     <Grid item xs={6}>
@@ -65,7 +67,7 @@ class AdvancedResult extends Component {
                             <PatentList select={this.state.select}/>
                         </Scrollbars>
                         <Button className={classes.button} style={{backgroundColor:'#2874F0'}} variant="contained" onClick={this.props.clearClassData} color="primary">
-                            Show All Patents
+                            Show All Results
                         </Button>
                         </Paper>
                         
