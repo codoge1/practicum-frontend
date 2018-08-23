@@ -28,7 +28,7 @@ const AllPatents = (props) => {
                 <div>
               {/* <Typography> */}
                 {/* Abstract: { el.patentAbstract } */}
-                <div style={{'textAlign':'left'}} dangerouslySetInnerHTML={{__html:  'Patent ID: ' + el.id + '</br></br>Abstract:  ' + el.patentAbstract}}></div>
+                <div style={{'textAlign':'left'}} dangerouslySetInnerHTML={{__html:   el.id + '</br></br>' + el.patentAbstract}}></div>
                 {/* </Typography> */}
                 <Avatar style={{cursor:'pointer'}} onClick={() => goToDetail(index)} className={classes.greenAvatar}>
                   <AssignmentIcon />
