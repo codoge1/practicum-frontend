@@ -91,7 +91,7 @@ const dataDetail = (props) => {
     return (
         <div className={classes.root}>
             <Grid container spacing={24}>
-                <Grid item xs={8}>
+                <Grid item xs={7}>
                 <div>
                 <Paper className={classes.paper} elevation={1}>
                     <Typography style={{textAlign: 'center'}} variant="display1" component="h1">
@@ -152,7 +152,7 @@ const dataDetail = (props) => {
 
                 </Grid>
                 
-                <Grid className={boldClass2} item xs={4}>
+                <Grid className={boldClass2} item xs={5}>
                     <Typography style={{textAlign:'left'}} variant="headline">
                         File Info:
                     </Typography>
@@ -188,7 +188,7 @@ const dataDetail = (props) => {
                         Citations:
                     </Typography>
 
-                    <Paper style={{marginTop:'3%', height:'29%'}} className={classes.paper}>
+                    <Paper style={{marginTop:'3%', }} className={classes.paper}>
                         <ForceGraph />
                     </Paper>
                 </Grid>
