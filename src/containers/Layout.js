@@ -49,7 +49,7 @@ class SimpleTabs extends React.Component {
         >
           <Tab 
             disableRipple
-            selected
+            // selected
             classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
             label={<Avatar src={Logo} className={classes.bigAvatar}></Avatar>}
           />

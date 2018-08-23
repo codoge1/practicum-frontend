@@ -201,9 +201,10 @@ class Search extends Component {
                                                 <Grid container className={classes.root}>
                                                     <Grid style={{marginTop:'0%', marginRight:'2%'}} item xs={2}>
                                                         <Paper style={{backgroundColor:'#FAFAFA', height:'70%'}} >
-                                                            <FormLabel style={{textAlign:'left'}}>Search By</FormLabel>
+                                                        <br/>
+                                                            <FormLabel style={{float:'left', paddingLeft:20}}>Search By</FormLabel>
                                                             <RadioGroup
-                                                                style={{margin:10}}
+                                                                style={{margin:20}}
                                                                 value={this.state.select}
                                                                 onChange={this.handleRadio}
                                                                 >
