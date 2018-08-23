@@ -9,6 +9,7 @@ import Avatar from '@material-ui/core/Avatar';
 import deepOrange from '@material-ui/core/colors/deepOrange';
 import Search from './Search'
 import Auth from './Auth'
+import Logo from '../dorothy.png'
 
 
 function TabContainer(props) {
@@ -49,7 +50,7 @@ class SimpleTabs extends React.Component {
           <Tab 
             disableRipple
             classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
-            label={<Avatar className={classes.orangeAvatar}>Do</Avatar>}
+            label={<Avatar src={Logo} className={classes.bigAvatar}></Avatar>}
           />
           <Tab
             disableRipple
@@ -170,6 +171,10 @@ const styles = theme => ({
     margin: 10,
     color: '#fff',
     backgroundColor: deepOrange[500],
+  },
+  bigAvatar: {
+    width: 60,
+    height: 60,
   },
 });
 
