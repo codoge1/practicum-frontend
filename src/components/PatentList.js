@@ -22,14 +22,14 @@ import boldClass from './DataList.css'
 
 const patentList = (props) => {
     const { classes } = props;
-    // const compare = (a, b) => {
-    //   if (a.score < b.score) {
-    //     return 1;
-    //   } else if (a.score > b.score) {
-    //     return -1;
-    //   }
-    //   return 0;
-    // }
+    const compare = (a, b) => {
+      if (a.score < b.score) {
+        return 1;
+      } else if (a.score > b.score) {
+        return -1;
+      }
+      return 0;
+    }
     let select = props.select
     let patents = props.classData.docs
     if (patents === undefined) {
@@ -41,7 +41,7 @@ const patentList = (props) => {
         patents = props.stc.patents
     }
     }
-    // patents.sort(compare);
+    patents.sort(compare);
     console.log(patents)
     const list = patents.map((el, index) => {
         return (<ExpansionPanel defaultExpanded className={classes.root} key={el.id}>
